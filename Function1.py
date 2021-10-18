@@ -41,3 +41,19 @@ def connectURI(server, port):
 #호출
 print( connectURI("credu.com", "80") )
 print( connectURI(port="80", server="credu.com") )
+
+#가변인자(입력 파라메터 갯수가 변경되는 경우)
+def union(*ar):
+    #지역변수 
+    result = []
+    #단어를 슬라이싱 
+    for item in ar:
+        #각 글자를 슬라이싱 
+        for x in item:
+            if x not in result:
+                result.append(x)
+    return result 
+
+#호출
+print( union("HAM","EGG") )
+print( union("HAM","EGG","SPAM") )
