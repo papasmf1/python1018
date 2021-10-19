@@ -1,9 +1,13 @@
 class Person:
     pass
+
 class Bird:
     pass
+
 class Student(Person):
     pass
+
+#인스턴스 생성
 p, s = Person(), Student()
 
 print("p is instance of Person: ", isinstance(p, Person))
