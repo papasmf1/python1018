@@ -34,10 +34,21 @@ print( [v.upper() for v in d.values()] )
 #필터링하는 구문 
 lst = [10, 25, 30]
 
+#조건절로 사용할 함수를 정의 
 def getBiggerThan20(i):
     return i > 20
 
+#필터링하는 함수 
 iterL = filter(getBiggerThan20, lst)
 for item in iterL:
     print(item)
 
+#즉흥적으로 또는 간결하게 조건함수를 정의 
+iterL = filter(lambda i:i>20, lst)
+for item in iterL:
+    print(item)
+#각 아이템에 맵핑하는 함수(스칼라가 아닌 경우)
+#람다는 간결하게 함수를 정의하는 문법 
+lst = [1,2,3,4,5]
+for item in map(lambda i:i+10, lst):
+    print(item)
