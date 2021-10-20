@@ -21,5 +21,28 @@ print("{0:.2f}".format(4/3))
 print("{0:e}".format(4/3))
 print("{0:,}".format(15000000))
 
+#파일쓰기 
+f = open("c:\\work\\demo.txt", "wt", encoding="utf-8")
+f.write("첫번째라인\n두번째\n세번째\n")
+f.close()
+
+if f.closed:
+    print("파일이 정상 종료")
+else:
+    f.close() 
+
+#파일읽기(default value: rt)
+f = open("c:\\work\\demo.txt", "rt", encoding="utf-8")
+print( f.read() )
+print( f.tell() )
+f.seek(0)
+print("--한줄씩 읽기---")
+print( f.readline() )
+print( f.readline() )
+f.seek(0)
+print("---list로 받기---")
+result = f.readlines()
+print( result )
+f.close()
 
 
