@@ -17,10 +17,17 @@ print( getcwd() )
 chdir("..")
 print( getcwd() )
 chdir("c:\\work")
+#특정 프로그램 실행
+#system("notepad.exe")
 
 #dir, ls 명령어 
 import glob 
-print( glob.glob("*.py") )
+result = glob.glob("c:\\work\\*.*") 
+for item in result:
+    print(item)
+
+
+
 
 
 
