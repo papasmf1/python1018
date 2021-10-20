@@ -55,6 +55,7 @@ f.write("새로운 데이터\n")
 f.close() 
 
 #파일 읽기 
+#다중 라인 주석 처리: ctrl + / 
 f = open("c:\\work\\demo.txt", "rt", encoding="utf-8")
 print( f.read() )
 f.close() 
