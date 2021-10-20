@@ -3,7 +3,7 @@ import sqlite3
 
 #파일을 먼저 생성(일단은 메모리에서 미리 연습)
 #데이터베이스 파일에 영구적으로 저장
-con = sqlite3.connect("c:\\work\\test.db")
+con = sqlite3.connect("c:\\work\\sample.db")
 #SQL구문을 실행할 커서 객체 생성
 cur = con.cursor() 
 #데이터 구조 만들기(테이블 스키마)
@@ -27,5 +27,8 @@ cur.execute("select * from PhoneBook;")
 print( cur.fetchall() )
 # for row in cur:
 #     print(row)
+
+#정상적으로 작업 완료(수동으로 커밋을 호출~~ )
+con.commit() 
 
 
