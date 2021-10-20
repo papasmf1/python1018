@@ -9,10 +9,21 @@ cur = con.cursor()
 cur.execute("create table PhoneBook (Name text, PhoneNum text);")
 #1건 입력
 cur.execute("insert into PhoneBook values ('derick', '010-111');")
+#입력 파라메터 처리
+cur.execute("insert into PhoneBook values (?, ?);", ("길동","010-222") )
+#N건 입력하기(2차원 행열 데이터)
+datalist = (("우치","010-123"), ("순신","010-456")) 
+cur.executemany("insert into PhoneBook values (?, ?);", datalist )
 
 #결과 검색
 cur.execute("select * from PhoneBook;")
-for row in cur:
-    print(row)
+print("---fetchone()---")
+print( cur.fetchone() )
+print("---fetchmany(2)---")
+print( cur.fetchmany(2) )
+print("---fetchall()---")
+print( cur.fetchall() )
+# for row in cur:
+#     print(row)
 
 
