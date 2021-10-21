@@ -7,7 +7,7 @@ from PyQt5 import uic
 #화면을 로딩
 form_class = uic.loadUiType("form1.ui")[0]
 
-#윈도우클래스를 정의
+#윈도우클래스를 정의(다중상속)
 class DemoForm(QDialog, form_class):
     def __init__(self):
         super().__init__() 
