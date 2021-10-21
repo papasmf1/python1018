@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 
 
 #화면을 로딩(form2.ui로 변경)
-form_class = uic.loadUiType("c:\\work\\form2.ui")[0]
+form_class = uic.loadUiType("form2.ui")[0]
 
 #윈도우클래스를 정의(부모 클래스 변경: QMainWindow)
 class DemoForm(QMainWindow, form_class):
