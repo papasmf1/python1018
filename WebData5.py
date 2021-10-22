@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import webbrowser   #브라우저로 넘기는 경우 
 import re 
 
+#100% 코드로만 작업
 class Form(QMainWindow):
     def __init__(self):
         super().__init__()

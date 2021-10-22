@@ -8,11 +8,15 @@ class DemoWindow(QMainWindow):
         self.setupUI()
 
     def setupUI(self):
-        self.setGeometry(800, 200, 300, 300)
+        #화면을 출력(X, Y, Width, Height)
+        self.setGeometry(200, 200, 300, 300)
 
         self.checkBox1 = QCheckBox("아이폰", self)
+        #(X축, Y축):좌측 상단의 꼭지점
         self.checkBox1.move(10, 20)
+        #(Width, Height)
         self.checkBox1.resize(150, 30)
+        #stateChanged시그널 발생하면 checkBoxState()메서드 연결 
         self.checkBox1.stateChanged.connect(self.checkBoxState)
 
         self.checkBox2 = QCheckBox("안드로이드폰", self)
@@ -38,6 +42,7 @@ class DemoWindow(QMainWindow):
             msg += "윈도우폰 "
         self.statusBar.showMessage(msg)
 
+#기본 실행틀 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     demoWindow = DemoWindow()
